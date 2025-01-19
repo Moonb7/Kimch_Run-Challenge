@@ -1,5 +1,4 @@
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -30,6 +29,11 @@ public class GameManager : MonoBehaviour
     public Player playerScript;
 
     public TMP_Text scoreText;
+
+    [Header("Stage Color")]
+    public Color[] stageColors;
+    public Color[] cameraBackgroundColors;
+
 
     void Awake()
     {
@@ -76,7 +80,7 @@ public class GameManager : MonoBehaviour
         {
             return 5f;
         }
-        float speed = 8f + (0.5f * Mathf.Floor(CalculateScore() / 10f));
+        float speed = 8f + (0.5f * Mathf.Floor(CalculateScore() / 5f));
         float maxSpeed = 30f;
         return Mathf.Min(speed, maxSpeed);
     }
