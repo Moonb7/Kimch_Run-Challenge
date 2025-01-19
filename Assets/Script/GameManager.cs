@@ -11,15 +11,18 @@ public enum GameState
 
 public class GameManager : Singleton<GameManager>
 {
+    [Header("Settings")]
     public int stageNumber { get; private set; } = 1;
+
+    public int nextStageScore = 30;
+
+    public int lives = 3;
 
     int backGroundNumber = 0;
 
     public GameState state = GameState.Intro;
 
-    public float playStartTime;
-
-    public int lives = 3;
+    float playStartTime;
 
     [Header("References")]
     public GameObject introUI;
@@ -89,9 +92,9 @@ public class GameManager : Singleton<GameManager>
         return Mathf.Min(speed, maxSpeed);
     }
 
-    public int nextStageScore()
+    public int NextStageScore()
     {
-        return stageNumber * 60;
+        return stageNumber * nextStageScore;
     }
 
     void Update()
@@ -99,7 +102,7 @@ public class GameManager : Singleton<GameManager>
         if (state == GameState.Playing)
         {
             scoreText.text = "Score: " + Mathf.FloorToInt(CalculateScore());
-            if (Mathf.FloorToInt(CalculateScore()) >= nextStageScore())
+            if (Mathf.FloorToInt(CalculateScore()) >= NextStageScore())
             {
                 stageNumber++;
                 backGroundNumber = backGroundNumber < cameraBackgroundColors.Length - 1 ? backGroundNumber + 1 : 0;

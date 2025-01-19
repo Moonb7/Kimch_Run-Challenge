@@ -1455,7 +1455,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 3
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 4
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -6740,9 +6740,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9390f454757e1554d9db1ee9f3d5a0f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  state: 0
-  playStartTime: 0
+  nextStageScore: 30
   lives: 3
+  state: 0
   introUI: {fileID: 1108149811}
   deadUI: {fileID: 1183445799}
   enemySpawner: {fileID: 1353385141}
@@ -6760,10 +6760,10 @@ MonoBehaviour:
   - {r: 0.20784315, g: 0.36078432, b: 0.47058827, a: 1}
   - {r: 0.09411766, g: 0.3372549, b: 0.7372549, a: 1}
   - {r: 0.20784315, g: 0.29803923, b: 0.6156863, a: 1}
-  BackgroundMaterial:
-  - {fileID: 2100000, guid: fd37f017e93bdec4a942be254e0ee7d6, type: 2}
-  - {fileID: 2100000, guid: d2911bace7e34264292890393c4af3b1, type: 2}
-  - {fileID: 2100000, guid: 7bb971ca23ff5a44288f5092ca339f1c, type: 2}
+  BackgroundMeshRenderer:
+  - {fileID: 676425926}
+  - {fileID: 265674101}
+  - {fileID: 1018654011}
 --- !u!1 &1353385141
 GameObject:
   m_ObjectHideFlags: 0
