@@ -1,6 +1,6 @@
 using System;
-using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 
 public class Player : MonoBehaviour
 {
@@ -21,11 +21,19 @@ public class Player : MonoBehaviour
     [SerializeField]
     private bool isInvincible = false;
 
+    [Header("Effect")]
+    public GameObject invincibleEffect;
+    private Light2D invincibleLigth;
+    private ParticleSystem invincibleParticle;
+
     void Awake()
     {
         playerRigidbody = GetComponent<Rigidbody2D>();
         palyerAnimator = GetComponent<Animator>();
         playerCollider = GetComponent<BoxCollider2D>();
+
+        invincibleLigth = invincibleEffect.GetComponent<Light2D>();
+        invincibleParticle = invincibleEffect.GetComponent<ParticleSystem>();
     }
 
     void Update()
@@ -54,6 +62,8 @@ public class Player : MonoBehaviour
     void StartInvincible()
     {
         CancelInvoke("StopInvincible");
+        invincibleLigth.enabled = true;
+        invincibleParticle.Play();
         isInvincible = true;
         Invoke("StopInvincible", invincibleTime);
     }
@@ -61,6 +71,8 @@ public class Player : MonoBehaviour
     void StopInvincible()
     {
         isInvincible = false;
+        invincibleParticle.Stop();
+        invincibleLigth.enabled = false;
     }
 
     public void KillPlayer()
