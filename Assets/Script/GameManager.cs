@@ -9,9 +9,11 @@ public enum GameState
     Dead
 }
 
-public class GameManager : MonoBehaviour
+public class GameManager : Singleton<GameManager>
 {
-    public static GameManager Instance;
+    public int stageNumber { get; private set; } = 1;
+
+    int backGroundNumber = 0;
 
     public GameState state = GameState.Intro;
 
@@ -30,18 +32,14 @@ public class GameManager : MonoBehaviour
 
     public TMP_Text scoreText;
 
-    [Header("Stage Color")]
+    [Header("Stage")]
     public Color[] stageColors;
     public Color[] cameraBackgroundColors;
 
+    public MeshRenderer[] BackgroundMeshRenderer;
 
-    void Awake()
-    {
-        if (Instance == null)
-        {
-            Instance = this;
-        }
-    }
+    private Camera mainCamera;
+
     void Start()
     {
         introUI.SetActive(true);
@@ -52,9 +50,15 @@ public class GameManager : MonoBehaviour
         goldenSpawner.SetActive(false);
 
         scoreText.text = "High Score: " + GetHightScore();
-    }
 
-    float CalculateScore()
+        mainCamera = Camera.main;
+        mainCamera.backgroundColor = cameraBackgroundColors[0];
+    }
+    /// <summary>
+    /// 실시간 점수를 계산하여 반환하는 함수입니다.
+    /// </summary>
+    /// <returns></returns>
+    public float CalculateScore()
     {
         return Time.time - playStartTime;
     }
@@ -85,11 +89,26 @@ public class GameManager : MonoBehaviour
         return Mathf.Min(speed, maxSpeed);
     }
 
+    public int nextStageScore()
+    {
+        return stageNumber * 60;
+    }
+
     void Update()
     {
         if (state == GameState.Playing)
         {
             scoreText.text = "Score: " + Mathf.FloorToInt(CalculateScore());
+            if (Mathf.FloorToInt(CalculateScore()) >= nextStageScore())
+            {
+                stageNumber++;
+                backGroundNumber = backGroundNumber < cameraBackgroundColors.Length - 1 ? backGroundNumber + 1 : 0;
+                mainCamera.backgroundColor = cameraBackgroundColors[backGroundNumber];
+                foreach (var meshRenderer in BackgroundMeshRenderer)
+                {
+                    meshRenderer.material.color = stageColors[backGroundNumber];
+                }
+            }
         }
         else if (state == GameState.Dead)
         {

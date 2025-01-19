@@ -1398,8 +1398,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 700, y: 400}
-  m_SizeDelta: {x: 400, y: 90}
+  m_AnchoredPosition: {x: 600, y: 400}
+  m_SizeDelta: {x: 650, y: 90}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &944434206
 MonoBehaviour:
@@ -1421,7 +1421,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Score : 0'
+  m_text: 'High Score : 9999'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e37bdeda16115e24e890c2ae34d0e08e, type: 2}
   m_sharedMaterial: {fileID: 3785239665093615772, guid: e37bdeda16115e24e890c2ae34d0e08e, type: 2}
@@ -1455,7 +1455,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 3
-  m_HorizontalAlignment: 2
+  m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -6756,10 +6756,14 @@ MonoBehaviour:
   - {r: 0.5411765, g: 0.6039216, b: 1, a: 1}
   - {r: 1, g: 0.5411765, b: 0.83921576, a: 1}
   cameraBackgroundColors:
-  - {r: 0.20784315, g: 0.57254905, b: 0.7372549, a: 0}
-  - {r: 0.20784315, g: 0.36078432, b: 0.47058827, a: 0}
-  - {r: 0.09411766, g: 0.3372549, b: 0.7372549, a: 0}
-  - {r: 0.20784315, g: 0.29803923, b: 0.6156863, a: 0}
+  - {r: 0.20784315, g: 0.57254905, b: 0.7372549, a: 1}
+  - {r: 0.20784315, g: 0.36078432, b: 0.47058827, a: 1}
+  - {r: 0.09411766, g: 0.3372549, b: 0.7372549, a: 1}
+  - {r: 0.20784315, g: 0.29803923, b: 0.6156863, a: 1}
+  BackgroundMaterial:
+  - {fileID: 2100000, guid: fd37f017e93bdec4a942be254e0ee7d6, type: 2}
+  - {fileID: 2100000, guid: d2911bace7e34264292890393c4af3b1, type: 2}
+  - {fileID: 2100000, guid: 7bb971ca23ff5a44288f5092ca339f1c, type: 2}
 --- !u!1 &1353385141
 GameObject:
   m_ObjectHideFlags: 0
