@@ -340,12 +340,6 @@ MonoBehaviour:
   minSpawnDelay: 1
   maxSpawnDelay: 3
   poolKey: 0
-  gameObjects:
-  - {fileID: 3533597790699429688, guid: fb966fd9f09d1b34883a3a26f175aa84, type: 3}
-  - {fileID: 3533597790699429688, guid: f7f1fa36218082549bc9d912169061f4, type: 3}
-  - {fileID: 3533597790699429688, guid: f6ed05e76ec700a4788f80e34a5b8d31, type: 3}
-  - {fileID: 3533597790699429688, guid: 796c7a8ee9871b34a89128ef91ad5e35, type: 3}
-  - {fileID: 3533597790699429688, guid: 0bb6cdf0bec567141a6e9f1056ab95d7, type: 3}
 --- !u!1 &265674098
 GameObject:
   m_ObjectHideFlags: 0
@@ -478,8 +472,6 @@ MonoBehaviour:
   minSpawnDelay: 15
   maxSpawnDelay: 20
   poolKey: 3
-  gameObjects:
-  - {fileID: 4663264496543066815, guid: caac1f219656b78499a3aa3af415013c, type: 3}
 --- !u!4 &326951383
 Transform:
   m_ObjectHideFlags: 0
@@ -1531,6 +1523,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32cbab588eb4878468682ef29f4c1231, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  poolDatas:
+  - key: 0
+    prefabs:
+    - {fileID: 3533597790699429688, guid: fb966fd9f09d1b34883a3a26f175aa84, type: 3}
+    - {fileID: 3533597790699429688, guid: f7f1fa36218082549bc9d912169061f4, type: 3}
+    - {fileID: 3533597790699429688, guid: f6ed05e76ec700a4788f80e34a5b8d31, type: 3}
+    - {fileID: 3533597790699429688, guid: 796c7a8ee9871b34a89128ef91ad5e35, type: 3}
+    - {fileID: 3533597790699429688, guid: 0bb6cdf0bec567141a6e9f1056ab95d7, type: 3}
+    defaultCapacity: 10
+    maxSize: 15
+  - key: 1
+    prefabs:
+    - {fileID: 7449750055860920491, guid: d18d284fee19b7c4eb9ca07906e6c91e, type: 3}
+    - {fileID: 5587308864890971470, guid: 226aa600b21bd2440bcfdca964b9f6ce, type: 3}
+    defaultCapacity: 5
+    maxSize: 10
+  - key: 2
+    prefabs:
+    - {fileID: 4663264496543066815, guid: e69bfbba94a010341b2aa400c3ec6779, type: 3}
+    - {fileID: 4663264496543066815, guid: d59ad92df38710f4789671ae9a3a3f21, type: 3}
+    - {fileID: 4663264496543066815, guid: 3f488fa9825b5804ebc230b785197a74, type: 3}
+    defaultCapacity: 5
+    maxSize: 10
+  - key: 3
+    prefabs:
+    - {fileID: 4663264496543066815, guid: caac1f219656b78499a3aa3af415013c, type: 3}
+    defaultCapacity: 5
+    maxSize: 10
 --- !u!4 &997806632
 Transform:
   m_ObjectHideFlags: 0
@@ -6842,9 +6862,6 @@ MonoBehaviour:
   minSpawnDelay: 2
   maxSpawnDelay: 5
   poolKey: 1
-  gameObjects:
-  - {fileID: 7449750055860920491, guid: d18d284fee19b7c4eb9ca07906e6c91e, type: 3}
-  - {fileID: 5587308864890971470, guid: 226aa600b21bd2440bcfdca964b9f6ce, type: 3}
 --- !u!4 &1353385143
 Transform:
   m_ObjectHideFlags: 0
@@ -7277,10 +7294,6 @@ MonoBehaviour:
   minSpawnDelay: 8
   maxSpawnDelay: 10
   poolKey: 2
-  gameObjects:
-  - {fileID: 4663264496543066815, guid: d59ad92df38710f4789671ae9a3a3f21, type: 3}
-  - {fileID: 4663264496543066815, guid: 3f488fa9825b5804ebc230b785197a74, type: 3}
-  - {fileID: 4663264496543066815, guid: e69bfbba94a010341b2aa400c3ec6779, type: 3}
 --- !u!4 &2042041328
 Transform:
   m_ObjectHideFlags: 0

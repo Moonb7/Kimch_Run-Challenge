@@ -97,22 +97,22 @@ public class Player : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collider)
     {
-
+        PoolKey poolKey = collider.GetComponent<Mover>().poolKey;
         switch (collider.gameObject.tag)
         {
             case "Enemy":
                 if (!isInvincible)
                 {
-                    Destroy(collider.gameObject);
+                    ObjectPoolManager.Instance.ReleaseObject(poolKey, collider.gameObject);
                     Hit();
                 }
                 break;
             case "Food":
-                Destroy(collider.gameObject);
+                ObjectPoolManager.Instance.ReleaseObject(poolKey, collider.gameObject);
                 Heal();
                 break;
             case "Golden":
-                Destroy(collider.gameObject);
+                ObjectPoolManager.Instance.ReleaseObject(poolKey, collider.gameObject);
                 StartInvincible();
                 break;
         }

@@ -12,8 +12,9 @@ public class Mover : MonoBehaviour
     {
         if (transform.position.x < -15)
         {
-            Destroy(gameObject);
+            ObjectPoolManager.Instance.ReleaseObject(poolKey, this.gameObject);
         }
+
         transform.position += Vector3.left * GameManager.Instance.CalculateGameSpeed() * Time.deltaTime;
     }
 }
