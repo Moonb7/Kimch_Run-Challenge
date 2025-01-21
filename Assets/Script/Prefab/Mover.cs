@@ -1,4 +1,3 @@
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class Mover : MonoBehaviour
@@ -7,13 +6,14 @@ public class Mover : MonoBehaviour
     public float moveSpeed = 1f;
     public Vector3 startPsosition;
 
-    void Start()
-    {
-
-    }
+    public PoolKey poolKey;
 
     void Update()
     {
+        if (transform.position.x < -15)
+        {
+            Destroy(gameObject);
+        }
         transform.position += Vector3.left * GameManager.Instance.CalculateGameSpeed() * Time.deltaTime;
     }
 }

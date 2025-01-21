@@ -7,6 +7,7 @@ public class Spawner : MonoBehaviour
     public float maxSpawnDelay;
 
     [Header("References")]
+    public PoolKey poolKey;
     public GameObject[] gameObjects;
     void OnEnable()
     {

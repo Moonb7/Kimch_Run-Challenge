@@ -10,10 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 3734856856178669015}
   - component: {fileID: 4099361279546086438}
-  - component: {fileID: 6706358205976382393}
   - component: {fileID: 945919340592727494}
   m_Layer: 0
-  m_Name: building_02
+  m_Name: building_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -78,7 +77,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 957240cc2354d0e46be68dc1bd31615e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 502cbdba1da01744f971b86f4d2a222e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -89,18 +88,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &6706358205976382393
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3533597790699429688}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0aaa7677fb490d46a1ca92717ae00df, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &945919340592727494
 MonoBehaviour:
   m_ObjectHideFlags: 0
