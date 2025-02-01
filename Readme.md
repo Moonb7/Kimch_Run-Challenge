@@ -24,10 +24,10 @@ C#, Unity의 기초를 다시 공부해보면서 감각을 되살려 재밌게 �
 - 적(Enemy) 및 아이템 생성, 삭제 기능 구현
 - stage 변환시 플레이 배경 변화 기능 구현
 - particle System을 이용한 플레이어 무적(Invincible) 효과 구현
+- ObjectPool을 이용하여 오브젝트 풀링 기법 적용
 
 ### 추후 구현할 기능
 
-- 오브젝트 풀링 기법 적용 - 진핸중 ObjectPool을 이용하여 적용할 예정
-- stage 변환시 Enemy 추가 및 변환 효과 적용(fade in, fade out 예정)
-- DB를 이용한 사용자 데이터 저장
-- 아이템 기능 추가 및 Enemy 기능 추가 (팩토리 패턴 적용 고민)
+- stage 변환시 변환 효과 적용(fade in, fade out 예정)
+- 아이템 점수 추가
+- 쉐이더 그래프 이용해서 효과 적용
